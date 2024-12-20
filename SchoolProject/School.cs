@@ -8,5 +8,26 @@ namespace SchoolProject
 {
     internal class School
     {
+        public string Name {  get; set; }
+
+        public List<Classroom>Classrooms { get; set; }
+
+        public List<Group>Groups { get; set; }
+
+        public List<Teacher> Teachers { get; set; }
+
+        public List<Student> Students { get; set; }
+
+        public School(string name)
+        {
+            Name = name;
+            Classrooms= new List<Classroom>();
+            Groups = new List<Group>();
+            Teachers= new List<Teacher>();
+            Students = new List<Student>();
+
+        }
+
+
     }
 }

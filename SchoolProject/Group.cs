@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolProject
 {
-    internal class ClassSchool
+    internal class Group
     {
     }
 }
