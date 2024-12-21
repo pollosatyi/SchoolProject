@@ -17,5 +17,23 @@ namespace SchoolProject
           Students = new List<Student>();
 
         }
+
+        public void  AddStudentsToGroup(Student student, School school)
+        {
+            if (!IsStudentInSchool(student, school))
+            {
+                Console.WriteLine("Такого студента нет");
+                return;
+
+            };
+
+            Students.Add(student);
+
+        }
+
+        public bool IsStudentInSchool(Student student,School school)
+        {
+            return school.Students.Contains(student);
+        }
     }
 }

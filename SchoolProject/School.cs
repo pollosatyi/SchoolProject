@@ -31,6 +31,30 @@ namespace SchoolProject
 
         }
 
+        public void AddStudentToSchool(Student student)
+        {
+            Students.Add(student);
+        }
+
+        public void AddGroupToSchool(Group group)
+        {
+            Groups.Add(group);
+        }
+
+        public void AddTeacherToSchool(Teacher teacher)
+        {
+            Teachers.Add(teacher);
+        }
+
+        public void AddClassroomToSchool(Classroom classroom)
+        {
+            Classrooms.Add(classroom);
+        }
+
+        public void AddLessonToSchool(Lesson lesson)
+        {
+            Lessons.Add(lesson);
+        }
 
     }
 }

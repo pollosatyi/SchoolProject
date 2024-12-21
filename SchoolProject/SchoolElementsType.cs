@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SchoolProject
 {
-    internal class Classroom
-    {
-        public int Id { get; set; }
-
-        public Classroom(int id)
-        {
-            Id = id;
-        }
+    internal enum SchoolElementsType
+    { 
+        exit=0,
+        student=1,
+        group=2,
+        teacher=3,
+        classroom=4,
+        lesson=5
     }
 }

@@ -2,9 +2,11 @@
 {
     public class Program
     {
-       public static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            School school = new School("newSchool");
+            AddToSchool.CreateSchoolElements(school);
+            Console.ReadKey();
         }
     }
 }

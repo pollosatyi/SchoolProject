@@ -17,6 +17,16 @@ namespace SchoolProject
             LastName = lastName;
         }
 
+       
+        public static Student CreateStudent()
+        {
+            
+            Console.WriteLine("Введите имя студента: ");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Введите фамилию студента: ");
+            string lastName = Console.ReadLine();
+            return new Student(firstName,lastName);
+        }
         
     }
 }

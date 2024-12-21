@@ -16,12 +16,57 @@ namespace SchoolProject
 
         public Teacher TeacherOfLesson { get; set; }
 
-        public Lesson(string name, Group group, Classroom classroom, Teacher teacher)
+        public Lesson(string name)
         {
             NameOfLesson = name;
+        }
+
+        public void AddGroupToLesson(Group group,School school)
+        {
+            if (!IsGroupInSchool(group, school))
+            {
+                Console.WriteLine("Такой группа не добавлена в список школы");
+                return;
+            }
             GroupOnLesson = group;
+        }
+
+
+        public void AddClassroomToLesson(Classroom classroom,School school)
+        {
+            if(!IsClassroomInSchool(classroom, school))
+            {
+                Console.WriteLine("Эта аудитория не добавлена в список школы");return;
+            }
             ClassroomOfLesson = classroom;
+        }
+
+
+        public void AddTeacherToLesson(Teacher teacher, School school)
+        {
+            if (!IsTeacherInSchool(teacher, school))
+            {
+                Console.WriteLine("Этого учителя нет в списке школы");
+                return;
+            }
             TeacherOfLesson = teacher;
+        }
+
+
+        public bool IsTeacherInSchool(Teacher teacher, School school)
+        {
+            return school.Teachers.Contains(teacher);
+        }
+
+
+        public bool IsClassroomInSchool(Classroom classroom, School school)
+        {
+            return school.Classrooms.Contains(classroom);
+        }
+
+        public bool IsGroupInSchool(Group group, School school)
+        {
+            return school.Groups.Contains(group);
         }
 
     }
