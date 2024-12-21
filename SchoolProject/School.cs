@@ -18,6 +18,8 @@ namespace SchoolProject
 
         public List<Student> Students { get; set; }
 
+        public List<Lesson> Lessons { get; set; }
+
         public School(string name)
         {
             Name = name;
@@ -25,6 +27,7 @@ namespace SchoolProject
             Groups = new List<Group>();
             Teachers= new List<Teacher>();
             Students = new List<Student>();
+            Lessons = new List<Lesson>();
 
         }
 

@@ -8,5 +8,15 @@ namespace SchoolProject
 {
     internal class Student
     {
+        public  string FirstName {  get; set; }
+        public string LastName { get; set; }
+
+        public Student(string firtsName, string lastName ) { 
+          
+            FirstName = firtsName;
+            LastName = lastName;
+        }
+
+        
     }
 }
