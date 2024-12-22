@@ -11,6 +11,66 @@ namespace SchoolProject.Schools
     {
         public static bool IsStudentInSchool(Student student, School school)
         {
+            Console.WriteLine("Есть ли такой студент в школе? ");
+            if (!IsStudent(student, school))
+            {
+                Console.WriteLine("Такого студента нет в школе");
+                return false;
+            }
+            return true;
+        }
+
+
+        public static bool IsGroupInSchool(Group group, School school)
+        {
+            Console.WriteLine("Есть ли такая группа в школе? ");
+            if (!IsGroup(group, school))
+            {
+                Console.WriteLine("Такой группы нет в школе");
+                return false;
+            }
+            return true;
+        }
+
+        public static bool IsClassroomInSchool(Classroom classroom, School school)
+        {
+
+            Console.WriteLine("Есть ли такая аудитория в школе? ");
+            if (!IsClassroom(classroom, school))
+            {
+                Console.WriteLine("Такой аудитории нет в школе");
+                return false;
+            }
+            return true;
+        }
+
+
+        public static bool IsTeacherInSchool(Teacher teacher, School school)
+        {
+            Console.WriteLine("Есть ли такой учитель в школе? ");
+            if (!IsTeacher(teacher, school))
+            {
+                Console.WriteLine("Такого учителя нет в школе");
+                return false;
+            }
+            return true;
+        }
+
+
+        public static bool IsLessonInSchool(Lesson lesson, School school)
+        {
+            Console.WriteLine("Есть ли такой учитель в школе? ");
+            if (!IsLesson(lesson, school))
+            {
+                Console.WriteLine("Такого учителя нет в школе");
+                return false;
+            }
+            return true;
+
+        }
+
+        public static bool IsStudent(Student student, School school)
+        {
             foreach (Student studentFromSchool in school.Students)
             {
                 if (studentFromSchool.FirstName == student.FirstName && studentFromSchool.LastName == student.LastName)
@@ -22,7 +82,7 @@ namespace SchoolProject.Schools
             return false;
         }
 
-        public static bool IsTeacherInSchool(Teacher teacher, School school)
+        public static bool IsTeacher(Teacher teacher, School school)
         {
             foreach (var teacherFromSchool in school.Teachers)
             {
@@ -35,7 +95,7 @@ namespace SchoolProject.Schools
         }
 
 
-        public static bool IsClassroomInSchool(Classroom classroom, School school)
+        public static bool IsClassroom(Classroom classroom, School school)
         {
             foreach (var classroomFromSchool in school.Classrooms)
             {
@@ -48,7 +108,7 @@ namespace SchoolProject.Schools
             return false;
         }
 
-        public static bool IsGroupInSchool(Group group, School school)
+        public static bool IsGroup(Group group, School school)
         {
             foreach (var groupFromSchool in school.Groups)
             {
@@ -58,7 +118,7 @@ namespace SchoolProject.Schools
         }
 
 
-        public static bool IsLessonInSchool(Lesson lesson, School school)
+        public static bool IsLesson(Lesson lesson, School school)
         {
             foreach (var lessonFromSchool in school.Lessons)
             {

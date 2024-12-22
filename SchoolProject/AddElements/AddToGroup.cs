@@ -14,7 +14,7 @@ namespace SchoolProject.AddElements
     {
         public static void AddStudentToGroup(Group group,School school)
         {
-            group.AddStudentsToGroup(GetStudent(), school);
+            group.AddStudentToGroup(GetStudent(), school);
         }
 
 
