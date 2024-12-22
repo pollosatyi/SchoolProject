@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SchoolProject.SchoolElements;
+
 
 namespace SchoolProject
 {
@@ -23,20 +25,44 @@ namespace SchoolProject
                     case MenuSelectionType.exitMenu:
                         IsMenuOn = false;
                         break;
+
+
                     case MenuSelectionType.groupMenu:
-                        //AddToGroup.AddStudentToGroup();
+                        Console.WriteLine("Добавление студента в группу");
+                        
+                        Group group = Group.CreateGroup();
+
+                        if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school)) break;
+                        
+
+                        AddToGroup.AddStudentToGroup(group, school);
+                        break;
+
+
+                    case MenuSelectionType.lessonMenu:
+                        Console.WriteLine("Есть ли такой урок в школе ");
+                        Lesson lesson = Lesson.CreateLesson();
+
+                        if (!PresenceOfElementsInSchool.IsLessonInSchool(lesson, school))
+                        {
+                            Console.WriteLine("Такого урока нет в школе");
+                            break;
+                        }
+                        Console.WriteLine("Добавление группы");
+
+                        AddToLesson.AddElementsToLesson(lesson,);
+
                         
                         break;
-                    case MenuSelectionType.lessonMenu:break;
-                    case MenuSelectionType.schoolMenu:break;
-                    default:Console.WriteLine("Неверный ввод"); break;
+                    case MenuSelectionType.schoolMenu: break;
+                    default: Console.WriteLine("Неверный ввод"); break;
                         //exitMenu= 0,
-                         //groupMenu = 1,
+                        //groupMenu = 1,
                         //lessonMenu = 2,
-                       // schoolMenu = 3
+                        // schoolMenu = 3
                 }
             }
-            
+
         }
 
         public static void PrintMenu()
@@ -46,5 +72,7 @@ namespace SchoolProject
             Console.WriteLine("2 - Выбрать меню добавления в урок \n ");
             Console.WriteLine("3 - Выбрать меню добавления в школу \n ");
         }
+
+
     }
 }

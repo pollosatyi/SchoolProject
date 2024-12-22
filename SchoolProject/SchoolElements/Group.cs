@@ -19,7 +19,7 @@ namespace SchoolProject.SchoolElements
             Name = name;
         }
 
-        public void AddStudentsToGroup(Student student, School school)
+        public void AddStudentToGroup(Student student, School school)
         {
             if (!PresenceOfElementsInSchool.IsStudentInSchool(student, school))
             {
