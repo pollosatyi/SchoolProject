@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SchoolProject.Schools;
 
-namespace SchoolProject
+namespace SchoolProject.SchoolElements
 {
     internal class Lesson
     {
@@ -16,12 +17,12 @@ namespace SchoolProject
 
         public Teacher TeacherOfLesson { get; set; }
 
-        public Lesson(string name)
+        private Lesson(string name)
         {
             NameOfLesson = name;
         }
 
-        public void AddGroupToLesson(Group group,School school)
+        public void AddGroupToLesson(Group group, School school)
         {
             if (!IsGroupInSchool(group, school))
             {
@@ -32,11 +33,11 @@ namespace SchoolProject
         }
 
 
-        public void AddClassroomToLesson(Classroom classroom,School school)
+        public void AddClassroomToLesson(Classroom classroom, School school)
         {
-            if(!IsClassroomInSchool(classroom, school))
+            if (!IsClassroomInSchool(classroom, school))
             {
-                Console.WriteLine("Эта аудитория не добавлена в список школы");return;
+                Console.WriteLine("Эта аудитория не добавлена в список школы"); return;
             }
             ClassroomOfLesson = classroom;
         }
@@ -69,5 +70,13 @@ namespace SchoolProject
             return school.Groups.Contains(group);
         }
 
+
+        public static Lesson CreateLesson()
+        {
+            Console.WriteLine("Введите название урока: ");
+            string lessonName = Console.ReadLine();
+            return new Lesson(lessonName);
+
+        }
     }
 }

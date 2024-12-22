@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolProject
+namespace SchoolProject.Enums
 {
     internal enum SchoolElementsType
-    { 
-        exit=0,
-        student=1,
-        group=2,
-        teacher=3,
-        classroom=4,
-        lesson=5
+    {
+        exit = 0,
+        student = 1,
+        group = 2,
+        teacher = 3,
+        classroom = 4,
+        lesson = 5
     }
 }

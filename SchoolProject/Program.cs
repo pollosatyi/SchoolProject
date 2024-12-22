@@ -1,4 +1,8 @@
-﻿namespace SchoolProject
+﻿using SchoolProject.AddElements;
+using SchoolProject.Schools;
+using System.Text.RegularExpressions;
+
+namespace SchoolProject
 {
     public class Program
     {
@@ -6,7 +10,11 @@
         {
             School school = new School("newSchool");
             AddToSchool.CreateSchoolElements(school);
-            Console.ReadKey();
+            AddToGroup.AddStudentToGroup(school.Groups[0], school);
+            school.Groups[0].PrintStudentsInGroup();
+            //school.PrintSchoolAllElements();
+
+            //Console.ReadKey();
         }
     }
 }

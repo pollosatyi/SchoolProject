@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SchoolProject.Enums;
+using SchoolProject.SchoolElements;
+using SchoolProject.Schools;
 
-namespace SchoolProject
+namespace SchoolProject.AddElements
 {
     internal static class AddToSchool
     {
-        //public School NewSchool { get; set; }
-        //public AddToSchool(School school)
-        //{
-        //    NewSchool = school;
-        //}
-
+        
 
         public static void CreateSchoolElements(School school)
         {
@@ -28,10 +26,18 @@ namespace SchoolProject
                     case SchoolElementsType.student:
                         school.AddStudentToSchool(Student.CreateStudent());
                         break;
-                    case SchoolElementsType.group: break;
-                    case SchoolElementsType.teacher: break;
-                    case SchoolElementsType.classroom: break;
-                    case SchoolElementsType.lesson: break;
+                    case SchoolElementsType.group:
+                        school.AddGroupToSchool(Group.CreateGroup());
+                        break;
+                    case SchoolElementsType.teacher:
+                        school.AddTeacherToSchool(Teacher.CreateTeacher());
+                        break;
+                    case SchoolElementsType.classroom:
+                        school.AddClassroomToSchool(Classroom.CreateClassroom());
+                        break;
+                    case SchoolElementsType.lesson:
+                        school.AddLessonToSchool(Lesson.CreateLesson());
+                        break;
 
                 }
 
@@ -45,7 +51,7 @@ namespace SchoolProject
         {
             Console.WriteLine("Выберите пункт меню");
             Console.WriteLine(
-                "0 - выхода \n" +
+                "0 - выхода из меню добавления в школу \n" +
                 "1 - Добавить студента в школу \n" +
                 "2 - Добавить группу в школу \n" +
                 "3 - Добавить учителя в школу \n" +
