@@ -21,7 +21,7 @@ namespace SchoolProject.SchoolElements
 
         public void AddStudentsToGroup(Student student, School school)
         {
-            if (!IsStudentInSchool(student, school))
+            if (!PresenceOfElementsInSchool.IsStudentInSchool(student, school))
             {
                 Console.WriteLine("Такого студента нет");
                 return;
@@ -32,18 +32,7 @@ namespace SchoolProject.SchoolElements
 
         }
 
-        public bool IsStudentInSchool(Student student, School school)
-        {
-            foreach (Student studentFromSchool in school.Students)
-            {
-                if (studentFromSchool.FirstName == student.FirstName && studentFromSchool.LastName == student.LastName)
-                {
-                    return true;
-                }
-
-            }
-            return false;
-        }
+        
 
 
         public static Group CreateGroup()
