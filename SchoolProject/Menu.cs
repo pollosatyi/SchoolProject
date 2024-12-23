@@ -32,9 +32,9 @@ namespace SchoolProject
                         Console.WriteLine("Добавление студента в группу");
                         Group group = Group.CreateGroup();
 
-                        if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school)) break;
+                        if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school,out Group groupInSchool)) break;
                         
-                        AddToGroup.AddStudentToGroup(group, school);
+                        AddToGroup.AddStudentToGroup(groupInSchool, school);
                         break;
 
 

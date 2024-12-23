@@ -23,50 +23,58 @@ namespace SchoolProject.Schools
         }
 
 
-        public static bool IsGroupInSchool(Group group, School school)
+        public static bool IsGroupInSchool(Group group, School school, out Group groupInSchool)
         {
             Console.WriteLine("Есть ли такая группа в школе? ");
             if (!IsGroup(group, school))
             {
                 Console.WriteLine("Такой группы нет в школе");
+                groupInSchool = null;
                 return false;
             }
+            groupInSchool=school.Groups.Where(x=>x.Name==group.Name).First();
             return true;
         }
 
-        public static bool IsClassroomInSchool(Classroom classroom, School school)
+        public static bool IsClassroomInSchool(Classroom classroom, School school,out Classroom classroomInSchool)
         {
 
             Console.WriteLine("Есть ли такая аудитория в школе? ");
             if (!IsClassroom(classroom, school))
             {
                 Console.WriteLine("Такой аудитории нет в школе");
+                classroomInSchool = null;
                 return false;
             }
+            classroomInSchool = school.Classrooms.Where(x => x.Id == classroom.Id).First();
             return true;
         }
 
 
-        public static bool IsTeacherInSchool(Teacher teacher, School school)
+        public static bool IsTeacherInSchool(Teacher teacher, School school,out Teacher teacherInSchool)
         {
             Console.WriteLine("Есть ли такой учитель в школе? ");
             if (!IsTeacher(teacher, school))
             {
                 Console.WriteLine("Такого учителя нет в школе");
+                teacherInSchool = null;
                 return false;
             }
+            teacherInSchool=school.Teachers.Where(x=>x.FirstName==teacher.FirstName&&x.LastName==teacher.LastName).First();
             return true;
         }
 
 
-        public static bool IsLessonInSchool(Lesson lesson, School school)
+        public static bool IsLessonInSchool(Lesson lesson, School school, out Lesson lessonInSchool)
         {
             Console.WriteLine("Есть ли такой учитель в школе? ");
             if (!IsLesson(lesson, school))
             {
                 Console.WriteLine("Такого учителя нет в школе");
+                lessonInSchool = null;
                 return false;
             }
+            lessonInSchool = school.Lessons.Where(x => x.NameOfLesson == lesson.NameOfLesson).First();
             return true;
 
         }
