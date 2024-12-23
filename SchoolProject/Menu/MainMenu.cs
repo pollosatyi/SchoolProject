@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using SchoolProject.SchoolElements;
 
 
-namespace SchoolProject
+namespace SchoolProject.Menu
 {
-    internal static class Menu
+    internal static class MainMenu
     {
-        public static void MenuSelection(School school)
+        public static void MainMenuSelection(School school)
         {
             bool IsMenuOn = true;
             while (IsMenuOn)
             {
-                PrintMenu();
+                PrintMainMenu();
                 MenuSelectionType menuSelectionType = (MenuSelectionType)Convert.ToInt32(Console.ReadLine());
                 switch (menuSelectionType)
                 {
@@ -90,7 +90,7 @@ namespace SchoolProject
 
         }
 
-        public static void PrintMenu()
+        public static void PrintMainMenu()
         {
             Console.WriteLine("Программа для учета студентов, учителей, уроков и аудиторий");
             Console.WriteLine("0 - для выхода \n" +
