@@ -21,14 +21,14 @@ namespace SchoolProject.SchoolElements
 
         public void AddStudentToGroup(Student student, School school)
         {
-            if (!PresenceOfElementsInSchool.IsStudentInSchool(student, school))
+            if (!PresenceOfElementsInSchool.IsStudentInSchool(student, school,out Student studentInSchool))
             {
                 Console.WriteLine("Такого студента нет");
                 return;
 
             };
 
-            Students.Add(student);
+            Students.Add(studentInSchool);
 
         }
 

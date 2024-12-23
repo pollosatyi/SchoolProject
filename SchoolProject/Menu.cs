@@ -28,38 +28,36 @@ namespace SchoolProject
 
 
                     case MenuSelectionType.groupMenu:
+
                         Console.WriteLine("Добавление студента в группу");
-                        
                         Group group = Group.CreateGroup();
-
-                        if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school)) break;
-                        
-
-                        AddToGroup.AddStudentToGroup(group, school);
+                        if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school,out Group groupInSchool)) break;
+                        AddToGroup.AddStudentToGroup(groupInSchool, school);
                         break;
 
 
-                    case MenuSelectionType.lessonMenu:
-                        Console.WriteLine("Есть ли такой урок в школе ");
-                        Lesson lesson = Lesson.CreateLesson();
 
-                        if (!PresenceOfElementsInSchool.IsLessonInSchool(lesson, school))
+                    case MenuSelectionType.lessonMenu:
+
+                        Console.WriteLine("Добавление элементов в урок");
+                        Lesson lesson = Lesson.CreateLesson();
+                        if (!PresenceOfElementsInSchool.IsLessonInSchool(lesson, school, out Lesson lessonInSchool))
                         {
                             Console.WriteLine("Такого урока нет в школе");
                             break;
                         }
-                        Console.WriteLine("Добавление группы");
+                        AddToLesson.AddElementsToLesson(lesson,school);
+                        break;
 
-                        AddToLesson.AddElementsToLesson(lesson,);
 
+
+                    case MenuSelectionType.schoolMenu:
+                        Console.WriteLine("Добавление элементов в школу");
+                        AddToSchool.CreateSchoolElements(school);
                         
                         break;
-                    case MenuSelectionType.schoolMenu: break;
                     default: Console.WriteLine("Неверный ввод"); break;
-                        //exitMenu= 0,
-                        //groupMenu = 1,
-                        //lessonMenu = 2,
-                        // schoolMenu = 3
+                        
                 }
             }
 
