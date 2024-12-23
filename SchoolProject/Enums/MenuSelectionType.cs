@@ -9,9 +9,14 @@ namespace SchoolProject.Enums
     internal enum MenuSelectionType
     {
         exitMenu=0,
-        groupMenu=1,
-        lessonMenu=2,
-        schoolMenu=3
+        groupAddMenu=1,
+        lessonAddMenu=2,
+        schoolAddMenu=3,
+        printStudentsMenu=4,
+        printGroupsMenu=5,
+        printTeachersMenu=6,
+        printClassroomsMenu=7,
+        printLessonsMenu=8
 
     }
 }

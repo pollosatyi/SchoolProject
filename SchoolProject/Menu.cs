@@ -27,17 +27,17 @@ namespace SchoolProject
                         break;
 
 
-                    case MenuSelectionType.groupMenu:
+                    case MenuSelectionType.groupAddMenu:
 
                         Console.WriteLine("Добавление студента в группу");
                         Group group = Group.CreateGroup();
-                        if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school,out Group groupInSchool)) break;
+                        if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school, out Group groupInSchool)) break;
                         AddToGroup.AddStudentToGroup(groupInSchool, school);
                         break;
 
 
 
-                    case MenuSelectionType.lessonMenu:
+                    case MenuSelectionType.lessonAddMenu:
 
                         Console.WriteLine("Добавление элементов в урок");
                         Lesson lesson = Lesson.CreateLesson();
@@ -46,18 +46,45 @@ namespace SchoolProject
                             Console.WriteLine("Такого урока нет в школе");
                             break;
                         }
-                        AddToLesson.AddElementsToLesson(lesson,school);
+                        AddToLesson.AddElementsToLesson(lesson, school);
                         break;
 
 
 
-                    case MenuSelectionType.schoolMenu:
+                    case MenuSelectionType.schoolAddMenu:
                         Console.WriteLine("Добавление элементов в школу");
                         AddToSchool.CreateSchoolElements(school);
-                        
+
                         break;
+
+
+                    case MenuSelectionType.printStudentsMenu:
+                        PrintSchoolElements.PrintStudents(school.Students);
+                        break;
+
+
+                    case MenuSelectionType.printGroupsMenu:
+                        PrintSchoolElements.PrintGroups(school.Groups);
+                        break;
+
+
+                    case MenuSelectionType.printTeachersMenu:
+                        PrintSchoolElements.PrintTeachers(school.Teachers);
+                        break;
+
+
+                    case MenuSelectionType.printClassroomsMenu:
+                        PrintSchoolElements.PrintClassroom(school.Classrooms);
+                        break;
+
+
+                    case MenuSelectionType.printLessonsMenu:
+                        PrintSchoolElements.PrintLessons(school.Lessons);
+                        break;
+
+
                     default: Console.WriteLine("Неверный ввод"); break;
-                        
+
                 }
             }
 
@@ -65,10 +92,15 @@ namespace SchoolProject
 
         public static void PrintMenu()
         {
-            Console.WriteLine("0 - для выхода \n");
-            Console.WriteLine("1 - Выбрать меню добавления в группу \n");
-            Console.WriteLine("2 - Выбрать меню добавления в урок \n ");
-            Console.WriteLine("3 - Выбрать меню добавления в школу \n ");
+            Console.WriteLine("Программа для учета студентов, учителей, уроков и аудиторий");
+            Console.WriteLine("0 - для выхода \n" +
+                              "1 - Выбрать меню добавления в группу \n" +
+                              "2 - Выбрать меню добавления в урок \n " +
+                              "3 - Выбрать меню добавления в школу \n " +
+                              "4 - Распечать список студентов в школе \n" +
+                              "5 - Распечать список групп в школе \n" +
+                              "6 - Распечать список учителей в школе \n" +
+                              "7 - Распечать список уроков в школе \n");
         }
 
 
