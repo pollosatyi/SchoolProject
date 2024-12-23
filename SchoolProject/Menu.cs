@@ -53,7 +53,7 @@ namespace SchoolProject
 
                     case MenuSelectionType.schoolMenu:
                         Console.WriteLine("Добавление элементов в школу");
-                        
+                        AddToSchool.CreateSchoolElements(school);
                         
                         break;
                     default: Console.WriteLine("Неверный ввод"); break;
