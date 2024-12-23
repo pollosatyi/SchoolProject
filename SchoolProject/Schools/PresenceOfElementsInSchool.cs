@@ -9,14 +9,16 @@ namespace SchoolProject.Schools
 {
     internal static class PresenceOfElementsInSchool
     {
-        public static bool IsStudentInSchool(Student student, School school)
+        public static bool IsStudentInSchool(Student student, School school,out Student studentInSchool)
         {
             Console.WriteLine("Есть ли такой студент в школе? ");
             if (!IsStudent(student, school))
             {
                 Console.WriteLine("Такого студента нет в школе");
+                studentInSchool = null;
                 return false;
             }
+             studentInSchool=school.Students.Where(x=>x.FirstName==student.FirstName&&x.LastName==student.LastName).First();
             return true;
         }
 

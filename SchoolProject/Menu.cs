@@ -28,19 +28,19 @@ namespace SchoolProject
 
 
                     case MenuSelectionType.groupMenu:
+
                         Console.WriteLine("Добавление студента в группу");
-                        
                         Group group = Group.CreateGroup();
 
                         if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school)) break;
                         
-
                         AddToGroup.AddStudentToGroup(group, school);
                         break;
 
 
                     case MenuSelectionType.lessonMenu:
-                        Console.WriteLine("Есть ли такой урок в школе ");
+
+                        Console.WriteLine("Добавление в урок");
                         Lesson lesson = Lesson.CreateLesson();
 
                         if (!PresenceOfElementsInSchool.IsLessonInSchool(lesson, school))
@@ -50,7 +50,7 @@ namespace SchoolProject
                         }
                         Console.WriteLine("Добавление группы");
 
-                        AddToLesson.AddElementsToLesson(lesson,);
+                        //AddToLesson.AddElementsToLesson(lesson,);
 
                         
                         break;
