@@ -31,35 +31,33 @@ namespace SchoolProject
 
                         Console.WriteLine("Добавление студента в группу");
                         Group group = Group.CreateGroup();
-
                         if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school,out Group groupInSchool)) break;
-                        
                         AddToGroup.AddStudentToGroup(groupInSchool, school);
                         break;
 
 
+
                     case MenuSelectionType.lessonMenu:
 
-                        Console.WriteLine("Добавление в урок");
+                        Console.WriteLine("Добавление элементов в урок");
                         Lesson lesson = Lesson.CreateLesson();
-
-                        if (!PresenceOfElementsInSchool.IsLessonInSchool(lesson, school))
+                        if (!PresenceOfElementsInSchool.IsLessonInSchool(lesson, school, out Lesson lessonInSchool))
                         {
                             Console.WriteLine("Такого урока нет в школе");
                             break;
                         }
-                        Console.WriteLine("Добавление группы");
+                        AddToLesson.AddElementsToLesson(lesson,school);
+                        break;
 
-                        //AddToLesson.AddElementsToLesson(lesson,);
 
+
+                    case MenuSelectionType.schoolMenu:
+                        Console.WriteLine("Добавление элементов в школу");
+                        
                         
                         break;
-                    case MenuSelectionType.schoolMenu: break;
                     default: Console.WriteLine("Неверный ввод"); break;
-                        //exitMenu= 0,
-                        //groupMenu = 1,
-                        //lessonMenu = 2,
-                        // schoolMenu = 3
+                        
                 }
             }
 
