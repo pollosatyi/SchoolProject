@@ -19,15 +19,15 @@ namespace SchoolProject.Menu
             while (IsMenuOn)
             {
                 PrintMainMenu();
-                MenuSelectionType menuSelectionType = (MenuSelectionType)Convert.ToInt32(Console.ReadLine());
+                MainMenuSelectionType menuSelectionType = (MainMenuSelectionType)Convert.ToInt32(Console.ReadLine());
                 switch (menuSelectionType)
                 {
-                    case MenuSelectionType.exitMenu:
+                    case MainMenuSelectionType.exitMenu:
                         IsMenuOn = false;
                         break;
 
 
-                    case MenuSelectionType.groupAddMenu:
+                    case MainMenuSelectionType.groupAddMenu:
 
                         Console.WriteLine("Добавление студента в группу");
                         Group group = Group.CreateGroup();
@@ -37,7 +37,7 @@ namespace SchoolProject.Menu
 
 
 
-                    case MenuSelectionType.lessonAddMenu:
+                    case MainMenuSelectionType.lessonAddMenu:
 
                         Console.WriteLine("Добавление элементов в урок");
                         Lesson lesson = Lesson.CreateLesson();
@@ -51,34 +51,34 @@ namespace SchoolProject.Menu
 
 
 
-                    case MenuSelectionType.schoolAddMenu:
+                    case MainMenuSelectionType.schoolAddMenu:
                         Console.WriteLine("Добавление элементов в школу");
                         AddToSchool.CreateSchoolElements(school);
 
                         break;
 
 
-                    case MenuSelectionType.printStudentsMenu:
+                    case MainMenuSelectionType.printStudentsMenu:
                         PrintSchoolElements.PrintStudents(school.Students);
                         break;
 
 
-                    case MenuSelectionType.printGroupsMenu:
+                    case MainMenuSelectionType.printGroupsMenu:
                         PrintSchoolElements.PrintGroups(school.Groups);
                         break;
 
 
-                    case MenuSelectionType.printTeachersMenu:
+                    case MainMenuSelectionType.printTeachersMenu:
                         PrintSchoolElements.PrintTeachers(school.Teachers);
                         break;
 
 
-                    case MenuSelectionType.printClassroomsMenu:
+                    case MainMenuSelectionType.printClassroomsMenu:
                         PrintSchoolElements.PrintClassroom(school.Classrooms);
                         break;
 
 
-                    case MenuSelectionType.printLessonsMenu:
+                    case MainMenuSelectionType.printLessonsMenu:
                         PrintSchoolElements.PrintLessons(school.Lessons);
                         break;
 

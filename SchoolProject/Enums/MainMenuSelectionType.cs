@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolProject.Enums
 {
-    internal enum MenuSelectionType
+    internal enum MainMenuSelectionType
     {
         exitMenu=0,
         groupAddMenu=1,
