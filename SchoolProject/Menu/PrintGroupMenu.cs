@@ -1,4 +1,6 @@
 ﻿using SchoolProject.Enums;
+using SchoolProject.SchoolElements;
+using SchoolProject.Schools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +24,7 @@ namespace SchoolProject.Menu
                         IsOnMenu = false;
                         break;
                     case MenuPrintInGroupType.printStudentsInGroup:
+                        //public static bool IsGroup(Group group, School school)
                         break;
 
                 }
@@ -35,5 +38,8 @@ namespace SchoolProject.Menu
             Console.WriteLine("0 - для выхода \n" +
                 "1 - для печати списка студентов");
         }
+
+        
+
     }
 }
