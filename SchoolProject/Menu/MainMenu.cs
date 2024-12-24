@@ -60,11 +60,11 @@ namespace SchoolProject.Menu
 
 
                     case MainMenuSelectionType.printMenu:
-                        PrintSchoolElements.PrintStudents(school.Students);
+                        PrintMenu.PrintMenuChoice(school);
                         break;
 
 
-                   
+
                     default: Console.WriteLine("Неверный ввод"); break;
 
                 }
@@ -79,13 +79,10 @@ namespace SchoolProject.Menu
                               "1 - Выбрать меню добавления в группу \n" +
                               "2 - Выбрать меню добавления в урок \n" +
                               "3 - Выбрать меню добавления в школу \n" +
-                              "4 - Распечать список студентов в школе \n" +
-                              "5 - Распечать список групп в школе \n" +
-                              "6 - Распечать список учителей в школе \n" +
-                              "7 - Распечать список аудиторий в школе \n" +
-                              "8 - Распечать список уроков в школе \n");
+                              "4 - Выбрать меню печати \n");
+
+
+
         }
-
-
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SchoolProject.Enums;
+using SchoolProject.Schools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace SchoolProject.Menu
 {
     internal static class PrintMenu
     {
-        public static void PrintMenuChoice()
+        public static void PrintMenuChoice(School school)
         {
             bool IsOnMenu = true;
             while (IsOnMenu)
@@ -23,6 +24,7 @@ namespace SchoolProject.Menu
                         IsOnMenu = false;
                         break;
                     case MenuPrintType.printElementsInGroup:
+                        PrintGroupMenu.PrintGroupMenuChoice( school);
                         break;
                     case MenuPrintType.printElementsInLesson:
                         break;
