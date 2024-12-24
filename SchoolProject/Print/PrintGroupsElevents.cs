@@ -8,5 +8,6 @@ namespace SchoolProject.Print
 {
     internal class PrintGroupsElevents
     {
+
     }
 }
