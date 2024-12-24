@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolProject.Schools
+namespace SchoolProject.Print
 {
     internal static class PrintSchoolElements
     {
@@ -33,7 +33,7 @@ namespace SchoolProject.Schools
         }
 
 
-        public static void PrintTeachers(List<Teacher>teachers)
+        public static void PrintTeachers(List<Teacher> teachers)
         {
             Console.WriteLine("Список учителей: ");
             Console.WriteLine("{0,-15} {1,-15}", "Имя", "Фамилия");
@@ -56,11 +56,11 @@ namespace SchoolProject.Schools
             Console.WriteLine();
         }
 
-        
+
         public static void PrintLessons(List<Lesson> lessons)
         {
             Console.WriteLine("Список уроков: ");
-            foreach(var lesson in lessons)
+            foreach (var lesson in lessons)
             {
                 Console.WriteLine(lesson.NameOfLesson);
             }

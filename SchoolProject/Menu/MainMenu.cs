@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SchoolProject.SchoolElements;
+using SchoolProject.Print;
 
 
 namespace SchoolProject.Menu
@@ -58,31 +59,12 @@ namespace SchoolProject.Menu
                         break;
 
 
-                    case MainMenuSelectionType.printStudentsMenu:
+                    case MainMenuSelectionType.printMenu:
                         PrintSchoolElements.PrintStudents(school.Students);
                         break;
 
 
-                    case MainMenuSelectionType.printGroupsMenu:
-                        PrintSchoolElements.PrintGroups(school.Groups);
-                        break;
-
-
-                    case MainMenuSelectionType.printTeachersMenu:
-                        PrintSchoolElements.PrintTeachers(school.Teachers);
-                        break;
-
-
-                    case MainMenuSelectionType.printClassroomsMenu:
-                        PrintSchoolElements.PrintClassroom(school.Classrooms);
-                        break;
-
-
-                    case MainMenuSelectionType.printLessonsMenu:
-                        PrintSchoolElements.PrintLessons(school.Lessons);
-                        break;
-
-
+                   
                     default: Console.WriteLine("Неверный ввод"); break;
 
                 }

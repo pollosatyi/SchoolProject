@@ -12,11 +12,7 @@ namespace SchoolProject.Enums
         groupAddMenu=1,
         lessonAddMenu=2,
         schoolAddMenu=3,
-        printStudentsMenu=4,
-        printGroupsMenu=5,
-        printTeachersMenu=6,
-        printClassroomsMenu=7,
-        printLessonsMenu=8
+        printMenu=4
 
     }
 }
