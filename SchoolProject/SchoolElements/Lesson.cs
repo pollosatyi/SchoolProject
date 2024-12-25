@@ -17,7 +17,7 @@ namespace SchoolProject.SchoolElements
 
         public Teacher TeacherOfLesson { get; set; }
 
-        private Lesson(string name)
+        public Lesson(string name)
         {
             NameOfLesson = name;
         }

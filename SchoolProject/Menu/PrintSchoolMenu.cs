@@ -24,8 +24,24 @@ namespace SchoolProject.Menu
                         IsOnMenu = false;
                         break;
                     case MenuPrintInSchoolType.printStudentsInSchool:
-                        PrintSchoolElements.PrintStudents(school);
+                        PrintSchoolElements.PrintStudents(school.Students);
                         break;
+                    case MenuPrintInSchoolType.printGroupsInSchool:
+                        PrintSchoolElements.PrintGroups(school.Groups);
+                        break;
+                    case MenuPrintInSchoolType.printTeachersInSchool:
+                        PrintSchoolElements.PrintTeachers(school.Teachers);
+                        break;
+                    case MenuPrintInSchoolType.printClassroomsInSchool:
+                        PrintSchoolElements.PrintClassroom(school.Classrooms);
+                        break;
+                    case MenuPrintInSchoolType.printLessonsInSchool:
+                        PrintSchoolElements.PrintLessons(school.Lessons);
+                        break;
+                    default:
+                        Console.WriteLine("Такой команды нет");
+                        break;
+
 
                 }
 

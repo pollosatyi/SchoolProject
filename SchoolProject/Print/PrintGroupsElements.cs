@@ -14,15 +14,21 @@ namespace SchoolProject.Print
         
         public static void PrintStudentsInGroup(School school)
         {
-            PresenceOfElementsInSchool.IsGroupInSchool(FindGroup(), school, out Group groupInSchool);
-            PrintSchoolElements.PrintStudents(groupInSchool.Students);
+            if (PresenceOfElementsInSchool.IsGroupInSchool(FindGroup(), school, out Group groupInSchool))
+            {
+                PrintSchoolElements.PrintStudents(groupInSchool.Students);
+            }
+            else
+            {
+                return;
+            }
         }
 
 
 
         private static Group FindGroup()
         {
-            Console.WriteLine("Введите название группы,котрую нужно распечатать: ");
+            Console.WriteLine("Введите название группы,которую нужно распечатать: ");
             string nameGroup=Console.ReadLine();
             return new Group(nameGroup);    
 
