@@ -22,6 +22,7 @@ namespace SchoolProject.AddElements
             Console.WriteLine("Добавление группы в урок");
             _group = Group.CreateGroup();
             lesson.AddGroupToLesson(_group,school);
+            Console.WriteLine($"Группа ");
 
             Console.WriteLine("Добавление аудитории в урок");
             _classroom=Classroom.CreateClassroom();

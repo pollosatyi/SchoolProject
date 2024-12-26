@@ -15,11 +15,11 @@ namespace SchoolProject.Schools
             PrintResultCheck();
             if (!IsStudent(student, school))
             {
-                Console.WriteLine("Такого студента нет в школе");
+                Console.WriteLine("Такого студента нет в школе \n");
                 studentInSchool = null;
                 return false;
             }
-            Console.WriteLine("Такой студент есть в школе");
+            Console.WriteLine("Такой студент есть в школе \n");
              studentInSchool=school.Students.Where(x=>x.FirstName==student.FirstName&&x.LastName==student.LastName).First();
             return true;
         }
@@ -31,11 +31,11 @@ namespace SchoolProject.Schools
             PrintResultCheck();
             if (!IsGroup(group, school))
             {
-                Console.WriteLine("Такой группы нет в школе");
+                Console.WriteLine("Такой группы нет в школе \n");
                 groupInSchool = null;
                 return false;
             }
-            Console.WriteLine("Такая группа есть в школе");
+            Console.WriteLine("Такая группа есть в школе \n");
             groupInSchool=school.Groups.Where(x=>x.Name==group.Name).First();
             return true;
         }
@@ -47,11 +47,11 @@ namespace SchoolProject.Schools
             PrintResultCheck();
             if (!IsClassroom(classroom, school))
             {
-                Console.WriteLine("Такой аудитории нет в школе");
+                Console.WriteLine("Такой аудитории нет в школе \n");
                 classroomInSchool = null;
                 return false;
             }
-            Console.WriteLine("Такая аудитория есть");
+            Console.WriteLine("Такая аудитория есть \n");
             classroomInSchool = school.Classrooms.Where(x => x.Id == classroom.Id).First();
             return true;
         }
@@ -63,11 +63,11 @@ namespace SchoolProject.Schools
             PrintResultCheck();
             if (!IsTeacher(teacher, school))
             {
-                Console.WriteLine("Такого учителя нет в школе");
+                Console.WriteLine("Такого учителя нет в школе \n");
                 teacherInSchool = null;
                 return false;
             }
-            Console.WriteLine("Такой учитель есть в школе");
+            Console.WriteLine("Такой учитель есть в школе \n");
             teacherInSchool=school.Teachers.Where(x=>x.FirstName==teacher.FirstName&&x.LastName==teacher.LastName).First();
             return true;
         }
@@ -79,11 +79,11 @@ namespace SchoolProject.Schools
             PrintResultCheck();
             if (!IsLesson(lesson, school))
             {
-                Console.WriteLine("Такого урока нет в школе");
+                Console.WriteLine("Такого урока нет в школе \n");
                 lessonInSchool = null;
                 return false;
             }
-            Console.WriteLine("Такой урок есть в школе");
+            Console.WriteLine("Такой урок есть в школе \n");
             lessonInSchool = school.Lessons.Where(x => x.NameOfLesson == lesson.NameOfLesson).First();
             return true;
 

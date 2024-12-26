@@ -31,7 +31,7 @@ namespace SchoolProject.Menu
                         PrintLessonMenu.PrintLessonMenuChoice(school);
                         break;
                     case MenuPrintType.printElementsInSchool:
-                       PrintSchoolMenu.PrintGroupMenuChoice(school);
+                       PrintSchoolMenu.PrintSchoolMenuChoice(school);
                         break;
                     default:
                         Console.WriteLine("Такой команды нет");

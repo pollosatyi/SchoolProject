@@ -36,26 +36,32 @@ namespace SchoolProject.Schools
         public void AddStudentToSchool(Student student)
         {
             Students.Add(student);
+            PrintAddStudent(student);
+
         }
 
         public void AddGroupToSchool(Group group)
         {
             Groups.Add(group);
+            PrintAddGroup(group);
         }
 
         public void AddTeacherToSchool(Teacher teacher)
         {
             Teachers.Add(teacher);
+            PrintAddTeacher(teacher);
         }
 
         public void AddClassroomToSchool(Classroom classroom)
         {
             Classrooms.Add(classroom);
+            PrintAddClassroom(classroom);
         }
 
         public void AddLessonToSchool(Lesson lesson)
         {
             Lessons.Add(lesson);
+            PrintAddLesson(lesson);
         }
 
         public void PrintSchoolAllElements()
@@ -119,5 +125,38 @@ namespace SchoolProject.Schools
             Console.WriteLine();
         }
 
+
+
+        public static void PrintAddStudent(Student student)
+        {
+            Console.WriteLine($"Студент {student.FirstName} {student.LastName} добавлен в школу \n");
+        }
+
+
+        public static void PrintAddGroup(Group group)
+        {
+            Console.WriteLine($"Группа {group.Name} добавлена в школу \n");
+        }
+
+
+        public static void PrintAddTeacher(Teacher teacher)
+        {
+            Console.WriteLine($"Учитель {teacher.FirstName} {teacher.LastName} добавлен в школу \n");
+        }
+
+
+        public static void PrintAddClassroom(Classroom classroom)
+        {
+            Console.WriteLine($"Аудитория {classroom.Id} добавлена в школу \n");
+        }
+
+
+        public static void PrintAddLesson(Lesson lesson)
+        {
+            Console.WriteLine($"Урок {lesson.NameOfLesson} добавлен в школу \n");
+        }
+
+
+        
     }
 }

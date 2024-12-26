@@ -22,7 +22,7 @@ namespace SchoolProject.AddElements
         {
             Console.WriteLine("Введите имя студента: ");
             string firstName = Console.ReadLine();
-            Console.WriteLine("Введите фамилию студента");
+            Console.WriteLine("Введите фамилию студента: ");
             string lastName = Console.ReadLine();
             return new Student(firstName, lastName);
         }

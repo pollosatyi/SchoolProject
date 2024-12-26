@@ -24,12 +24,13 @@ namespace SchoolProject.SchoolElements
         {
             if (!PresenceOfElementsInSchool.IsStudentInSchool(student, school,out Student studentInSchool))
             {
-                Console.WriteLine("Такого студента нет");
+                Console.WriteLine("Такой студент не добавлен в группу");
                 return;
 
             };
-
+ 
             Students.Add(studentInSchool);
+            Console.WriteLine($"Студент {studentInSchool.FirstName} {studentInSchool.LastName} добавлен в группу");
 
         }
 

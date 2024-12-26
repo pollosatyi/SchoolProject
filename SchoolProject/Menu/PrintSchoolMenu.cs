@@ -11,7 +11,7 @@ namespace SchoolProject.Menu
 {
     internal static class PrintSchoolMenu
     {
-        public static void PrintGroupMenuChoice(School school)
+        public static void PrintSchoolMenuChoice(School school)
         {
             bool IsOnMenu = true;
             while (IsOnMenu)
