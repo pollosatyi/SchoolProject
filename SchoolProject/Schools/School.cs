@@ -89,7 +89,7 @@ namespace SchoolProject.Schools
         public void PrintTeachersInSchool()
         {
             Console.WriteLine("Список учителей: ");
-            Console.WriteLine("{0,-15} {1,-15}", "Имя", "Фамилия");
+            Console.WriteLine("{0,-15} {1,-15}", "Имя учителя", "Фамилия учителя");
             foreach (var teacher in Teachers)
             {
                 Console.WriteLine("{0,-15} {1, -15}", $"{teacher.FirstName}", $"{teacher.LastName}");

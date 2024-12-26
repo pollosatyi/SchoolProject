@@ -28,5 +28,11 @@ namespace SchoolProject.SchoolElements
             return new Teacher(firstname, lastname);
         }
 
+        public static void PrintTeacher(Teacher teacher)
+        {
+            Console.WriteLine("{0,-15} {1,-15}", "Имя учителя", "Фамилия учителя");
+            Console.WriteLine("{0,-15} {1, -15}", $"{teacher.FirstName}", $"{teacher.LastName}\n");
+        }
+
     }
 }

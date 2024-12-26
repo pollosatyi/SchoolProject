@@ -24,9 +24,13 @@ namespace SchoolProject.SchoolElements
 
         public void AddGroupToLesson(Group group, School school)
         {
-            if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school, out Group groupInSchool)) return;
-            
+            if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school, out Group groupInSchool))
+            {
+                Console.WriteLine($"Группа не добавлена в урок");
+                return;
+            }
             GroupOnLesson = groupInSchool;
+            Console.WriteLine($"Группа {GroupOnLesson.Name} была  добавлена в урок"); 
         }
 
 
@@ -34,9 +38,10 @@ namespace SchoolProject.SchoolElements
         {
             if (!PresenceOfElementsInSchool.IsClassroomInSchool(classroom, school, out Classroom classroomInSchool))
             {
-                Console.WriteLine("Эта аудитория не добавлена в список школы"); return;
+                Console.WriteLine("Эта аудитория не добавлена в урок"); return;
             }
             ClassroomOfLesson = classroomInSchool;
+            Console.WriteLine($"Аудитория ") ;
         }
 
 
@@ -44,10 +49,11 @@ namespace SchoolProject.SchoolElements
         {
             if (!PresenceOfElementsInSchool.IsTeacherInSchool(teacher, school, out Teacher teacherInSchool))
             {
-                Console.WriteLine("Этого учителя нет в списке школы");
+                Console.WriteLine("Этот учитель не добавлен в урок ");
                 return;
             }
             TeacherOfLesson = teacherInSchool;
+            Console.WriteLine("Этот учитель добавлен в урок");
         }
 
 

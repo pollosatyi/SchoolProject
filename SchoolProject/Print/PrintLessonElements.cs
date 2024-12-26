@@ -12,10 +12,11 @@ namespace SchoolProject.Print
     {
         public static void PrintElementsInLesson(School school)
         {
-            if (PresenceOfElementsInSchool.IsLessonInSchool(FindLesson(), school, out Lesson lessonInSchool))
+            if (PresenceOfElementsInSchool.IsLessonInSchool(FindLesson(), school, out Lesson lesson))
             {
-
-
+                PrintGroupInLesson(lesson);
+                PrintTeacherInLesson(lesson);
+                PrintClassroomInLesson(lesson);
             }
             else
             {
@@ -34,9 +35,19 @@ namespace SchoolProject.Print
 
         }
 
-        private static void PrintGroupInLesson()
+        private static void PrintGroupInLesson(Lesson lesson)
         {
-            Console.WriteLine()
+           Group.PrintNameGroup(lesson.GroupOnLesson);
+        }
+
+        private static void PrintTeacherInLesson(Lesson lesson)
+        {
+            Teacher.PrintTeacher(lesson.TeacherOfLesson);
+        }
+
+        private static void PrintClassroomInLesson(Lesson lesson)
+        {
+            Classroom.PrintClassroom(lesson.ClassroomOfLesson);
         }
     }
 }

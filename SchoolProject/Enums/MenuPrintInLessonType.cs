@@ -9,8 +9,6 @@ namespace SchoolProject.Enums
     internal enum MenuPrintInLessonType
     {
         exit=0,
-        printGroupInLesson=1,
-        printTeacherInLesson=2,
-        printClassroomInLesson=3,
+        printElementsInLesson=1,
     }
 }

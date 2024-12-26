@@ -1,4 +1,5 @@
 ﻿using SchoolProject.Enums;
+using SchoolProject.Print;
 using SchoolProject.Schools;
 using System;
 using System.Collections.Generic;
@@ -27,8 +28,10 @@ namespace SchoolProject.Menu
                         PrintGroupMenu.PrintGroupMenuChoice( school);
                         break;
                     case MenuPrintType.printElementsInLesson:
+                        PrintLessonMenu.PrintLessonMenuChoice(school);
                         break;
                     case MenuPrintType.printElementsInSchool:
+                       PrintSchoolMenu.PrintGroupMenuChoice(school);
                         break;
                     default:
                         Console.WriteLine("Такой команды нет");

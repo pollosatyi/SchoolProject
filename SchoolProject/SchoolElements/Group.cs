@@ -50,5 +50,10 @@ namespace SchoolProject.SchoolElements
             PrintSchoolElements.PrintStudents(Students);
             Console.WriteLine();
         }
+
+        public static void PrintNameGroup(Group group)
+        {
+            Console.WriteLine($"название группы: {group.Name}\n");
+        }
     }
 }

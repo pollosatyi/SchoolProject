@@ -22,5 +22,10 @@ namespace SchoolProject.SchoolElements
             return new Classroom(idClassroom);
 
         }
+
+        public static void PrintClassroom(Classroom classroom)
+        {
+            Console.WriteLine($"Номер аудитории: {classroom.Id}");
+        }
     }
 }

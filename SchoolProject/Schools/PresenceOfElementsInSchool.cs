@@ -11,13 +11,15 @@ namespace SchoolProject.Schools
     {
         public static bool IsStudentInSchool(Student student, School school,out Student studentInSchool)
         {
-            Console.WriteLine("Есть ли такой студент в школе? ");
+            Console.WriteLine("Проверка: Есть ли такой студент в школе? ");
+            PrintResultCheck();
             if (!IsStudent(student, school))
             {
                 Console.WriteLine("Такого студента нет в школе");
                 studentInSchool = null;
                 return false;
             }
+            Console.WriteLine("Такой студент есть в школе");
              studentInSchool=school.Students.Where(x=>x.FirstName==student.FirstName&&x.LastName==student.LastName).First();
             return true;
         }
@@ -25,13 +27,15 @@ namespace SchoolProject.Schools
 
         public static bool IsGroupInSchool(Group group, School school, out Group groupInSchool)
         {
-            Console.WriteLine("Есть ли такая группа в школе? ");
+            Console.WriteLine("Проверка: Есть ли такая группа в школе? ");
+            PrintResultCheck();
             if (!IsGroup(group, school))
             {
                 Console.WriteLine("Такой группы нет в школе");
                 groupInSchool = null;
                 return false;
             }
+            Console.WriteLine("Такая группа есть в школе");
             groupInSchool=school.Groups.Where(x=>x.Name==group.Name).First();
             return true;
         }
@@ -39,13 +43,15 @@ namespace SchoolProject.Schools
         public static bool IsClassroomInSchool(Classroom classroom, School school,out Classroom classroomInSchool)
         {
 
-            Console.WriteLine("Есть ли такая аудитория в школе? ");
+            Console.WriteLine("Проверка: Есть ли такая аудитория в школе? ");
+            PrintResultCheck();
             if (!IsClassroom(classroom, school))
             {
                 Console.WriteLine("Такой аудитории нет в школе");
                 classroomInSchool = null;
                 return false;
             }
+            Console.WriteLine("Такая аудитория есть");
             classroomInSchool = school.Classrooms.Where(x => x.Id == classroom.Id).First();
             return true;
         }
@@ -53,13 +59,15 @@ namespace SchoolProject.Schools
 
         public static bool IsTeacherInSchool(Teacher teacher, School school,out Teacher teacherInSchool)
         {
-            Console.WriteLine("Есть ли такой учитель в школе? ");
+            Console.WriteLine("Проверка: Есть ли такой учитель в школе? ");
+            PrintResultCheck();
             if (!IsTeacher(teacher, school))
             {
                 Console.WriteLine("Такого учителя нет в школе");
                 teacherInSchool = null;
                 return false;
             }
+            Console.WriteLine("Такой учитель есть в школе");
             teacherInSchool=school.Teachers.Where(x=>x.FirstName==teacher.FirstName&&x.LastName==teacher.LastName).First();
             return true;
         }
@@ -67,13 +75,15 @@ namespace SchoolProject.Schools
 
         public static bool IsLessonInSchool(Lesson lesson, School school, out Lesson lessonInSchool)
         {
-            Console.WriteLine("Есть ли такой учитель в школе? ");
+            Console.WriteLine("Проверка: Есть ли такой урок в школе? ");
+            PrintResultCheck();
             if (!IsLesson(lesson, school))
             {
-                Console.WriteLine("Такого учителя нет в школе");
+                Console.WriteLine("Такого урока нет в школе");
                 lessonInSchool = null;
                 return false;
             }
+            Console.WriteLine("Такой урок есть в школе");
             lessonInSchool = school.Lessons.Where(x => x.NameOfLesson == lesson.NameOfLesson).First();
             return true;
 
@@ -135,6 +145,11 @@ namespace SchoolProject.Schools
                 if (lessonFromSchool.NameOfLesson == lesson.NameOfLesson) return true;
             }
             return true;
+        }
+
+        public static void PrintResultCheck()
+        {
+            Console.WriteLine("Результат проверки: ");
         }
     }
 }
