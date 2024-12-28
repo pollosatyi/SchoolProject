@@ -21,12 +21,19 @@ namespace SchoolProject.AddElements
         {
             Console.WriteLine("Добавление группы в урок");
             _group = Group.CreateGroup();
-            lesson.AddGroupToLesson(_group,school);
-            Console.WriteLine($"Группа ");
+            lesson.AddGroupToLesson(_group,school,out bool isAddGroup);
+            if (!isAddGroup)
+            {
+                PrinFailedAddition();
+                return;
+            }
+           
 
             Console.WriteLine("Добавление аудитории в урок");
             _classroom=Classroom.CreateClassroom();
-            lesson.AddClassroomToLesson(_classroom,school);
+            lesson.AddClassroomToLesson(_classroom,school, out bool isAddClassroom);
+
+
 
             Console.WriteLine("Добавление учителя в урок");
             _teacher=Teacher.CreateTeacher();
@@ -34,6 +41,12 @@ namespace SchoolProject.AddElements
 
         }
 
-        
+
+        private static void PrinFailedAddition()
+        {
+            Console.WriteLine("Не удалось добавить элементы в урок");
+        }
+
+
     }
 }
