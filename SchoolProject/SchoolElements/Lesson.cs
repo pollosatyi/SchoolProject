@@ -22,26 +22,31 @@ namespace SchoolProject.SchoolElements
             NameOfLesson = name;
         }
 
-        public void AddGroupToLesson(Group group, School school)
+        public void AddGroupToLesson(Group group, School school, out bool isAddGroup)
         {
             if (!PresenceOfElementsInSchool.IsGroupInSchool(group, school, out Group groupInSchool))
             {
                 Console.WriteLine($"Группа не добавлена в урок \n");
+                isAddGroup = false;
                 return;
             }
             GroupOnLesson = groupInSchool;
+            isAddGroup = true;
             Console.WriteLine($"Группа {GroupOnLesson.Name} была  добавлена в урок \n"); 
         }
 
 
-        public void AddClassroomToLesson(Classroom classroom, School school)
+        public void AddClassroomToLesson(Classroom classroom, School school, out bool isAddClassroom )
         {
             if (!PresenceOfElementsInSchool.IsClassroomInSchool(classroom, school, out Classroom classroomInSchool))
             {
-                Console.WriteLine("Эта аудитория не добавлена в урок \n"); return;
+                Console.WriteLine("Эта аудитория не добавлена в урок \n");
+                isAddClassroom = false;
+                return;
             }
             ClassroomOfLesson = classroomInSchool;
             Console.WriteLine($"Аудитория с номером {classroom.Id} добавлен в урок \n") ;
+            isAddClassroom=true;
         }
 
 
