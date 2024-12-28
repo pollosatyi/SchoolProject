@@ -32,12 +32,22 @@ namespace SchoolProject.AddElements
             Console.WriteLine("Добавление аудитории в урок");
             _classroom=Classroom.CreateClassroom();
             lesson.AddClassroomToLesson(_classroom,school, out bool isAddClassroom);
-
+            if (!isAddClassroom)
+            {
+                PrinFailedAddition();
+                return;
+            }
 
 
             Console.WriteLine("Добавление учителя в урок");
             _teacher=Teacher.CreateTeacher();
-            lesson.AddTeacherToLesson(_teacher,school);
+            lesson.AddTeacherToLesson(_teacher,school, out bool isTeacherAdd);
+            if (!isTeacherAdd)
+            {
+                 PrinFailedAddition();
+                return;
+            }
+            Console.WriteLine("Все элементы добавлены в урок");
 
         }
 
