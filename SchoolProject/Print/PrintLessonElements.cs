@@ -30,8 +30,8 @@ namespace SchoolProject.Print
         private static Lesson FindLesson()
         {
             Console.WriteLine("Введите название урока,который нужно распечатать: ");
-            string nameGroup = Console.ReadLine();
-            return new Lesson(nameGroup);
+            string nameLesson = Console.ReadLine();
+            return new Lesson(nameLesson);
 
         }
 

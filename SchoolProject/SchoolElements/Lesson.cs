@@ -50,15 +50,17 @@ namespace SchoolProject.SchoolElements
         }
 
 
-        public void AddTeacherToLesson(Teacher teacher, School school)
+        public void AddTeacherToLesson(Teacher teacher, School school, out bool isTeacherAdd)
         {
             if (!PresenceOfElementsInSchool.IsTeacherInSchool(teacher, school, out Teacher teacherInSchool))
             {
                 Console.WriteLine("Этот учитель не добавлен в урок \n");
+                isTeacherAdd = false;
                 return;
             }
             TeacherOfLesson = teacherInSchool;
             Console.WriteLine($"Учитель {TeacherOfLesson.FirstName} {TeacherOfLesson.LastName} добавлен в урок \n");
+            isTeacherAdd=true;
         }
 
 

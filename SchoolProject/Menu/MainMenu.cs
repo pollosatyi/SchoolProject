@@ -47,7 +47,7 @@ namespace SchoolProject.Menu
                             Console.WriteLine("Такого урока нет в школе");
                             break;
                         }
-                        AddToLesson.AddElementsToLesson(lesson, school);
+                        AddToLesson.AddElementsToLesson(lessonInSchool, school);
                         break;
 
 
