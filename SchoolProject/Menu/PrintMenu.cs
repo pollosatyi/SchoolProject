@@ -21,17 +21,17 @@ namespace SchoolProject.Menu
 
                 switch (menuPrintType)
                 {
-                    case MenuPrintType.exit:
+                    case MenuPrintType.Exit:
                         IsOnMenu = false;
                         break;
-                    case MenuPrintType.printElementsInGroup:
-                        PrintGroupMenu.PrintGroupMenuChoice( school);
+                    case MenuPrintType.PrintElementsInGroup:
+                        PrintGroupMenu.PrintGroupMenuChoice(school);
                         break;
-                    case MenuPrintType.printElementsInLesson:
+                    case MenuPrintType.PrintElementsInLesson:
                         PrintLessonMenu.PrintLessonMenuChoice(school);
                         break;
-                    case MenuPrintType.printElementsInSchool:
-                       PrintSchoolMenu.PrintSchoolMenuChoice(school);
+                    case MenuPrintType.PrintElementsInSchool:
+                        PrintSchoolMenu.PrintSchoolMenuChoice(school);
                         break;
                     default:
                         Console.WriteLine("Такой команды нет");

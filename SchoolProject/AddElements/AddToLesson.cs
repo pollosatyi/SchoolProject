@@ -17,21 +17,21 @@ namespace SchoolProject.AddElements
 
         private static Teacher _teacher { get; set; }
 
-        public static void AddElementsToLesson(Lesson lesson,School school)
+        public static void AddElementsToLesson(Lesson lesson, School school)
         {
             Console.WriteLine("Добавление группы в урок");
             _group = Group.CreateGroup();
-            lesson.AddGroupToLesson(_group,school,out bool isAddGroup);
+            lesson.AddGroupToLesson(_group, school, out bool isAddGroup);
             if (!isAddGroup)
             {
                 PrinFailedAddition();
                 return;
             }
-           
+
 
             Console.WriteLine("Добавление аудитории в урок");
-            _classroom=Classroom.CreateClassroom();
-            lesson.AddClassroomToLesson(_classroom,school, out bool isAddClassroom);
+            _classroom = Classroom.CreateClassroom();
+            lesson.AddClassroomToLesson(_classroom, school, out bool isAddClassroom);
             if (!isAddClassroom)
             {
                 PrinFailedAddition();
@@ -40,11 +40,11 @@ namespace SchoolProject.AddElements
 
 
             Console.WriteLine("Добавление учителя в урок");
-            _teacher=Teacher.CreateTeacher();
-            lesson.AddTeacherToLesson(_teacher,school, out bool isTeacherAdd);
+            _teacher = Teacher.CreateTeacher();
+            lesson.AddTeacherToLesson(_teacher, school, out bool isTeacherAdd);
             if (!isTeacherAdd)
             {
-                 PrinFailedAddition();
+                PrinFailedAddition();
                 return;
             }
             Console.WriteLine("Все элементы добавлены в урок");

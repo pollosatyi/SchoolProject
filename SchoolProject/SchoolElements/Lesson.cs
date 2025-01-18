@@ -32,11 +32,11 @@ namespace SchoolProject.SchoolElements
             }
             GroupOnLesson = groupInSchool;
             isAddGroup = true;
-            Console.WriteLine($"Группа {GroupOnLesson.Name} была  добавлена в урок \n"); 
+            Console.WriteLine($"Группа {GroupOnLesson.Name} была  добавлена в урок \n");
         }
 
 
-        public void AddClassroomToLesson(Classroom classroom, School school, out bool isAddClassroom )
+        public void AddClassroomToLesson(Classroom classroom, School school, out bool isAddClassroom)
         {
             if (!PresenceOfElementsInSchool.IsClassroomInSchool(classroom, school, out Classroom classroomInSchool))
             {
@@ -45,8 +45,8 @@ namespace SchoolProject.SchoolElements
                 return;
             }
             ClassroomOfLesson = classroomInSchool;
-            Console.WriteLine($"Аудитория с номером {classroom.Id} добавлен в урок \n") ;
-            isAddClassroom=true;
+            Console.WriteLine($"Аудитория с номером {classroom.Id} добавлен в урок \n");
+            isAddClassroom = true;
         }
 
 
@@ -60,7 +60,7 @@ namespace SchoolProject.SchoolElements
             }
             TeacherOfLesson = teacherInSchool;
             Console.WriteLine($"Учитель {TeacherOfLesson.FirstName} {TeacherOfLesson.LastName} добавлен в урок \n");
-            isTeacherAdd=true;
+            isTeacherAdd = true;
         }
 
 

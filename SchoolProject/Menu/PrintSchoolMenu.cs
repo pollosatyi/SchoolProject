@@ -20,22 +20,22 @@ namespace SchoolProject.Menu
                 MenuPrintInSchoolType menuPrintInSchoolType = (MenuPrintInSchoolType)Convert.ToInt32(Console.ReadLine());
                 switch (menuPrintInSchoolType)
                 {
-                    case MenuPrintInSchoolType.exit:
+                    case MenuPrintInSchoolType.Exit:
                         IsOnMenu = false;
                         break;
-                    case MenuPrintInSchoolType.printStudentsInSchool:
+                    case MenuPrintInSchoolType.PrintStudentsInSchool:
                         PrintSchoolElements.PrintStudents(school.Students);
                         break;
-                    case MenuPrintInSchoolType.printGroupsInSchool:
+                    case MenuPrintInSchoolType.PrintGroupsInSchool:
                         PrintSchoolElements.PrintGroups(school.Groups);
                         break;
-                    case MenuPrintInSchoolType.printTeachersInSchool:
+                    case MenuPrintInSchoolType.PrintTeachersInSchool:
                         PrintSchoolElements.PrintTeachers(school.Teachers);
                         break;
-                    case MenuPrintInSchoolType.printClassroomsInSchool:
+                    case MenuPrintInSchoolType.PrintClassroomsInSchool:
                         PrintSchoolElements.PrintClassroom(school.Classrooms);
                         break;
-                    case MenuPrintInSchoolType.printLessonsInSchool:
+                    case MenuPrintInSchoolType.PrintLessonsInSchool:
                         PrintSchoolElements.PrintLessons(school.Lessons);
                         break;
                     default:

@@ -9,7 +9,7 @@ namespace SchoolProject.Schools
 {
     internal static class PresenceOfElementsInSchool
     {
-        public static bool IsStudentInSchool(Student student, School school,out Student studentInSchool)
+        public static bool IsStudentInSchool(Student student, School school, out Student studentInSchool)
         {
             Console.WriteLine("Проверка: Есть ли такой студент в школе? ");
             PrintResultCheck();
@@ -20,7 +20,7 @@ namespace SchoolProject.Schools
                 return false;
             }
             Console.WriteLine("Такой студент есть в школе \n");
-             studentInSchool=school.Students.Where(x=>x.FirstName==student.FirstName&&x.LastName==student.LastName).First();
+            studentInSchool = school.Students.Where(x => x.FirstName == student.FirstName && x.LastName == student.LastName).First();
             return true;
         }
 
@@ -36,11 +36,11 @@ namespace SchoolProject.Schools
                 return false;
             }
             Console.WriteLine("Такая группа есть в школе \n");
-            groupInSchool=school.Groups.Where(x=>x.Name==group.Name).First();
+            groupInSchool = school.Groups.Where(x => x.Name == group.Name).First();
             return true;
         }
 
-        public static bool IsClassroomInSchool(Classroom classroom, School school,out Classroom classroomInSchool)
+        public static bool IsClassroomInSchool(Classroom classroom, School school, out Classroom classroomInSchool)
         {
 
             Console.WriteLine("Проверка: Есть ли такая аудитория в школе? ");
@@ -57,7 +57,7 @@ namespace SchoolProject.Schools
         }
 
 
-        public static bool IsTeacherInSchool(Teacher teacher, School school,out Teacher teacherInSchool)
+        public static bool IsTeacherInSchool(Teacher teacher, School school, out Teacher teacherInSchool)
         {
             Console.WriteLine("Проверка: Есть ли такой учитель в школе? ");
             PrintResultCheck();
@@ -68,7 +68,7 @@ namespace SchoolProject.Schools
                 return false;
             }
             Console.WriteLine("Такой учитель есть в школе \n");
-            teacherInSchool=school.Teachers.Where(x=>x.FirstName==teacher.FirstName&&x.LastName==teacher.LastName).First();
+            teacherInSchool = school.Teachers.Where(x => x.FirstName == teacher.FirstName && x.LastName == teacher.LastName).First();
             return true;
         }
 

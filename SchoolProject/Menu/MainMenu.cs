@@ -23,12 +23,12 @@ namespace SchoolProject.Menu
                 MainMenuSelectionType menuSelectionType = (MainMenuSelectionType)Convert.ToInt32(Console.ReadLine());
                 switch (menuSelectionType)
                 {
-                    case MainMenuSelectionType.exitMenu:
+                    case MainMenuSelectionType.ExitMenu:
                         IsMenuOn = false;
                         break;
 
 
-                    case MainMenuSelectionType.groupAddMenu:
+                    case MainMenuSelectionType.GroupAddMenu:
 
                         Console.WriteLine("Добавление студента в группу");
                         Group group = Group.CreateGroup();
@@ -38,7 +38,7 @@ namespace SchoolProject.Menu
 
 
 
-                    case MainMenuSelectionType.lessonAddMenu:
+                    case MainMenuSelectionType.LessonAddMenu:
 
                         Console.WriteLine("Добавление элементов в урок");
                         Lesson lesson = Lesson.CreateLesson();
@@ -52,14 +52,14 @@ namespace SchoolProject.Menu
 
 
 
-                    case MainMenuSelectionType.schoolAddMenu:
+                    case MainMenuSelectionType.SchoolAddMenu:
                         Console.WriteLine("Добавление элементов в школу");
                         AddToSchool.CreateSchoolElements(school);
 
                         break;
 
 
-                    case MainMenuSelectionType.printMenu:
+                    case MainMenuSelectionType.PrintMenu:
                         PrintMenu.PrintMenuChoice(school);
                         break;
 

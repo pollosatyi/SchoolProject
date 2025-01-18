@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolProject.Print
 {
-    internal static class PrintLessonElements 
+    internal static class PrintLessonElements
     {
         public static void PrintElementsInLesson(School school)
         {
@@ -22,7 +22,7 @@ namespace SchoolProject.Print
             {
                 return;
             }
-            
+
         }
 
 
@@ -37,7 +37,7 @@ namespace SchoolProject.Print
 
         private static void PrintGroupInLesson(Lesson lesson)
         {
-           Group.PrintNameGroup(lesson.GroupOnLesson);
+            Group.PrintNameGroup(lesson.GroupOnLesson);
         }
 
         private static void PrintTeacherInLesson(Lesson lesson)

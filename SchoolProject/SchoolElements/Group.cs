@@ -22,19 +22,19 @@ namespace SchoolProject.SchoolElements
 
         public void AddStudentToGroup(Student student, School school)
         {
-            if (!PresenceOfElementsInSchool.IsStudentInSchool(student, school,out Student studentInSchool))
+            if (!PresenceOfElementsInSchool.IsStudentInSchool(student, school, out Student studentInSchool))
             {
                 Console.WriteLine("Такой студент не добавлен в группу");
                 return;
 
             };
- 
+
             Students.Add(studentInSchool);
             Console.WriteLine($"Студент {studentInSchool.FirstName} {studentInSchool.LastName} добавлен в группу");
 
         }
 
-        
+
 
 
         public static Group CreateGroup()

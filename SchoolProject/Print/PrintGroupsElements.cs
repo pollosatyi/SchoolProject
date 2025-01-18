@@ -11,7 +11,7 @@ namespace SchoolProject.Print
     internal static class PrintGroupsElements
     {
 
-        
+
         public static void PrintStudentsInGroup(School school)
         {
             if (PresenceOfElementsInSchool.IsGroupInSchool(FindGroup(), school, out Group groupInSchool))
@@ -29,11 +29,11 @@ namespace SchoolProject.Print
         private static Group FindGroup()
         {
             Console.WriteLine("Введите название группы,которую нужно распечатать: ");
-            string nameGroup=Console.ReadLine();
-            return new Group(nameGroup);    
+            string nameGroup = Console.ReadLine();
+            return new Group(nameGroup);
 
         }
-        
+
 
     }
 }

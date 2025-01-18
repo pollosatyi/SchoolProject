@@ -13,7 +13,7 @@ namespace SchoolProject
             School school = new School("newSchool");
             school.Students = new List<Student>() { new Student("петр", "петров") };
             school.Groups = new List<Group>() { new Group("первая") };
-            school.Teachers=new List<Teacher>() { new Teacher("иван", "иванов") };
+            school.Teachers = new List<Teacher>() { new Teacher("иван", "иванов") };
             school.Classrooms = new List<Classroom>() { new Classroom(1) };
             school.Lessons = new List<Lesson>() { new Lesson("алгебра") };
             MainMenu.MainMenuSelection(school);

@@ -11,7 +11,7 @@ namespace SchoolProject.AddElements
 {
     internal static class AddToSchool
     {
-        
+
 
         public static void CreateSchoolElements(School school)
         {

@@ -8,11 +8,11 @@ namespace SchoolProject.Enums
 {
     internal enum SchoolElementsType
     {
-        exit = 0,
-        student = 1,
-        group = 2,
-        teacher = 3,
-        classroom = 4,
-        lesson = 5
+        Exit = 0,
+        Student = 1,
+        Group = 2,
+        Teacher = 3,
+        Classroom = 4,
+        Lesson = 5
     }
 }

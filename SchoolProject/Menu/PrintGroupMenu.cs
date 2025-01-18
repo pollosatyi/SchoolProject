@@ -14,17 +14,17 @@ namespace SchoolProject.Menu
     {
         public static void PrintGroupMenuChoice(School school)
         {
-            bool IsOnMenu=true;
+            bool IsOnMenu = true;
             while (IsOnMenu)
             {
                 Print();
                 MenuPrintInGroupType menuPrintInGroupType = (MenuPrintInGroupType)Convert.ToInt32(Console.ReadLine());
                 switch (menuPrintInGroupType)
                 {
-                    case MenuPrintInGroupType.exit:
+                    case MenuPrintInGroupType.Exit:
                         IsOnMenu = false;
                         break;
-                    case MenuPrintInGroupType.printStudentsInGroup:
+                    case MenuPrintInGroupType.PrintStudentsInGroup:
                         PrintGroupsElements.PrintStudentsInGroup(school);
                         break;
 
@@ -40,7 +40,7 @@ namespace SchoolProject.Menu
                 "1 - для печати списка студентов");
         }
 
-        
+
 
     }
 }

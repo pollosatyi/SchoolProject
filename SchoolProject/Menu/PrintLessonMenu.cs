@@ -20,10 +20,10 @@ namespace SchoolProject.Menu
                 MenuPrintInLessonType menuPrintInLessonType = (MenuPrintInLessonType)Convert.ToInt32(Console.ReadLine());
                 switch (menuPrintInLessonType)
                 {
-                    case MenuPrintInLessonType.exit:
+                    case MenuPrintInLessonType.Exit:
                         IsOnMenu = false;
                         break;
-                    case MenuPrintInLessonType.printElementsInLesson:
+                    case MenuPrintInLessonType.PrintElementsInLesson:
                         PrintLessonElements.PrintElementsInLesson(school);
                         break;
 

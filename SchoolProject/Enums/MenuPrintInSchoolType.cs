@@ -8,11 +8,11 @@ namespace SchoolProject.Enums
 {
     internal enum MenuPrintInSchoolType
     {
-        exit = 0,
-        printStudentsInSchool = 1,
-        printGroupsInSchool = 2,
-        printTeachersInSchool = 3,
-        printClassroomsInSchool = 4,
-        printLessonsInSchool = 5
+        Exit = 0,
+        PrintStudentsInSchool = 1,
+        PrintGroupsInSchool = 2,
+        PrintTeachersInSchool = 3,
+        PrintClassroomsInSchool = 4,
+        PrintLessonsInSchool = 5
     }
 }
