@@ -19,23 +19,23 @@ namespace SchoolProject.AddElements
             {
                 PrintMenu();
                 SchoolElementsType schoolElementsType = (SchoolElementsType)Convert.ToInt32(Console.ReadLine());
-                if (schoolElementsType == SchoolElementsType.exit) break;
+                if (schoolElementsType == SchoolElementsType.Exit) break;
 
                 switch (schoolElementsType)
                 {
-                    case SchoolElementsType.student:
+                    case SchoolElementsType.Student:
                         school.AddStudentToSchool(Student.CreateStudent());
                         break;
-                    case SchoolElementsType.group:
+                    case SchoolElementsType.Group:
                         school.AddGroupToSchool(Group.CreateGroup());
                         break;
-                    case SchoolElementsType.teacher:
+                    case SchoolElementsType.Teacher:
                         school.AddTeacherToSchool(Teacher.CreateTeacher());
                         break;
-                    case SchoolElementsType.classroom:
+                    case SchoolElementsType.Classroom:
                         school.AddClassroomToSchool(Classroom.CreateClassroom());
                         break;
-                    case SchoolElementsType.lesson:
+                    case SchoolElementsType.Lesson:
                         school.AddLessonToSchool(Lesson.CreateLesson());
                         break;
 
